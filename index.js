@@ -1,24 +1,19 @@
-// let company = prompt('какая компания создала js?', '');
-//
-// if (company == 'Netscape'){
-//     alert("True")
-// }
-// else{
-//     alert("False")
-// }
+function pow(x, n) {
+    let result = 1;
 
-// let number = prompt('write this number','');
-// if (number > 0){
-//     alert(1)
-// }else if(number < 0){
-//     alert(-1)
-// }else{
-//     alert(0)
-// }
+    for (let i = 0; i < n; i++) {
+        result *= x;
+    }
 
-// let result = (a + b < 4) ? "мало" : "много";
+    return result;
+}
 
-// let login;
-// let message = (login == 'Сотрудник') ? 'Привет' :
-//     (login == 'Директор') ? 'Здравствуйте' :
-//         (login == '') ? 'Нет логина' : '';
+let x = prompt("x?", "");
+let n = prompt("n?", "");
+
+if (n < 0) {
+    alert(`Степень ${n} не поддерживается,
+    введите целую степень, большую 0`);
+} else {
+    alert( pow(x, n) );
+}
